@@ -30,39 +30,38 @@ changing into the directory under which it was downloaded):
     $ make
     $ sudo make install
 
-The directory under which the files are installed defaults to <tt>/usr/local/webos</tt>.
-You can install them elsewhere by supplying a value for <tt>WEBOS\_INSTALL\_ROOT</tt>
-when invoking <tt>cmake</tt>. For example:
+The directory under which the files are installed defaults to `/usr/local/webos`.
+You can install them elsewhere by supplying a value for `WEBOS_INSTALL_ROOT`
+when invoking `cmake`. For example:
 
     $ cmake -D WEBOS_INSTALL_ROOT:PATH=$HOME/projects/openwebos ..
     $ make
     $ make install
 
-will install the files in subdirectories of <tt>$HOME/projects/openwebos</tt>.
+will install the files in subdirectories of `$HOME/projects/openwebos`.
 
-Specifying <tt>WEBOS\_INSTALL\_ROOT</tt> also causes <tt>pkg-config</tt> to look
-in that tree first before searching the standard locations. You can specify
-additional directories to be searched prior to this one by setting the
-<tt>PKG\_CONFIG\_PATH</tt> environment variable.
+Specifying `WEBOS_INSTALL_ROOT` also causes `pkg-config` to look in that tree
+first before searching the standard locations. You can specify additional
+directories to be searched prior to this one by setting the `PKG_CONFIG_PATH`
+environment variable.
 
-If not specified, <tt>WEBOS\_INSTALL\_ROOT</tt> defaults to <tt>/usr/local/webos</tt>.
+If not specified, `WEBOS_INSTALL_ROOT` defaults to `/usr/local/webos`.
 
 To configure for a debug build, enter:
 
     $ cmake -D CMAKE_BUILD_TYPE:STRING=Debug ..
 
-To see a list of the make targets that <tt>cmake</tt> has generated, enter:
+To see a list of the make targets that `cmake` has generated, enter:
 
     $ make help
 
 ## Uninstalling
 
-From the directory where you originally ran <tt>make install<tt>, enter:
+From the directory where you originally ran `make install`, enter:
 
     $ [sudo] make uninstall
 
-You will need to use <tt>sudo</tt> if you did not specify <tt>WEBOS\_INSTALL\_ROOT</tt>.
-
+You will need to use `sudo` if you did not specify `WEBOS_INSTALL_ROOT`.
 
 ## Copyright and License Information
 
