@@ -63,6 +63,18 @@ From the directory where you originally ran `make install`, enter:
 
 You will need to use `sudo` if you did not specify `WEBOS_INSTALL_ROOT`.
 
+## Unit test
+
+After you have run `cmake`, you can build the `test-sandbox` unit test by entering:
+
+    $ make tests
+
+You will find the `test-sandbox` binary in the current directory.
+
+To configure the building of `test-sandbox` to be done as part of 'make all', enter:
+
+    $ cmake -D WEBOS_CONFIG_BUILD_TESTS:BOOL=TRUE ..
+
 ## Copyright and License Information
 
 Unless otherwise specified, all content, including all source code files and
