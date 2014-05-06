@@ -80,7 +80,7 @@ To configure the building of `test-sandbox` to be done as part of 'make all', en
 Unless otherwise specified, all content, including all source code files and
 documentation files in this repository are:
 
-Copyright (c) 2010-2013 LG Electronics, Inc.
+Copyright (c) 2010-2012 Hewlett-Packard Development Company, L.P.
 
 Unless otherwise specified or set forth in the NOTICE file, all content,
 including all source code files and documentation files in this repository are:
