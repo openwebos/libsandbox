@@ -16,21 +16,7 @@
 #
 # LICENSE@@@
 
-set(libsandbox_test_NAME test-${CMAKE_PROJECT_NAME})
-add_executable(${libsandbox_test_NAME} EXCLUDE_FROM_ALL testsandbox.cpp)
-target_link_libraries(${libsandbox_test_NAME} ${CMAKE_PROJECT_NAME})
-
-add_dependencies(${libsandbox_test_NAME} ${CMAKE_PROJECT_NAME})
-
-if(WEBOS_CONFIG_BUILD_TESTS)
-	set(all_flag ALL)
-else()
-	set(all_flag "")
-endif()
-
-add_custom_target(tests ${all_flag}
-	DEPENDS ${libsandbox_test_NAME}
-	COMMAND cp ${libsandbox_test_NAME} ${PROJECT_BINARY_DIR}
-	COMMAND chmod u=rwx,g=rx,o=rx ${PROJECT_BINARY_DIR}/${libsandbox_test_NAME}
-	COMMENT "Building ${libsandbox_test_NAME}")
-
+add_executable(testsandbox testsandbox.cpp)
+webos_build_program(NAME testsandbox)
+target_link_libraries(testsandbox sandbox)
+#	webos_config_build_tests(src/test/testsandbox.cpp)

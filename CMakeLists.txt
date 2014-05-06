@@ -34,4 +34,6 @@ webos_add_compiler_flags(ALL -Wall -fno-inline -fPIC)
 add_library(sandbox STATIC src/sandbox.cpp)
 webos_build_library()
 
-add_subdirectory(src/test)
+if(WEBOS_CONFIG_BUILD_TESTS)
+#	add_subdirectory(src/test)
+endif()
